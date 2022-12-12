@@ -3,8 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
+  env: {
+    
+  },
+
   images: {
-    domains: ["localhost"]
+    domains: ["api.new.year.portal.rtyva.ru"]
   }
 }
 

@@ -4,7 +4,7 @@ import {fetch} from "next/dist/compiled/@edge-runtime/primitives/fetch";
 import {useRouter} from "next/router";
 
 export const getServerSideProps = async ({query: {name = "", status = "", location = "", date = "2022-12-01", category = ""}}) => {
-    const res = await fetch(`http://localhost:1337/api/events?filters[title][$containsi]=${name}&filters[status][$containsi]=${status}&filters[region][name][$containsi]=${location}&filters[beginning_date][$gte]=${date}&filters[event_categories][category_name][$containsi]=${category}`)
+    const res = await fetch(`http://api.new.year.portal.rtyva.ru/api/events?filters[title][$containsi]=${name}&filters[status][$containsi]=${status}&filters[region][name][$containsi]=${location}&filters[beginning_date][$gte]=${date}&filters[event_categories][category_name][$containsi]=${category}`)
         .then((res) => res.json())
         .then((res) => res.data)
     const str = '&filters[beginning_date][$qte]=${date}'

@@ -25,7 +25,7 @@ const LastNews = (props) => {
                     <div key={item} className="last-news__card">
 
                         <div className="responsive-image-container">
-                            <Image src={"http://localhost:1337"+item.preview_image.url} layout="fill" objectFit="cover"/>
+                            <Image src={"http://api.new.year.portal.rtyva.ru"+item.preview_image.url} layout="fill" objectFit="cover"/>
                         </div>
 
                         <div className="last-news__card-content__container">

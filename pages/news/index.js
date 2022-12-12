@@ -2,7 +2,7 @@ import React from 'react';
 import PostCard from "../../components/Posts/PostCard";
 
 export const getServerSideProps = async () => {
-    const posts = await fetch(`http://localhost:1337/api/posts?populate=*`)
+    const posts = await fetch(`http://api.new.year.portal.rtyva.ru/api/posts?populate=*`)
         .then((res) => res.json())
         .then((res) => res.data)
 

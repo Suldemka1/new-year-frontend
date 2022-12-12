@@ -5,15 +5,15 @@ import EventCategories from "../components/Events/EventCategories";
 import LastNews from "../components/News/LastNews";
 
 export const getServerSideProps = async () => {
-    const categories = await fetch(`http://localhost:1337/api/event-categories`)
+    const categories = await fetch(`http://api.new.year.portal.rtyva.ru/api/event-categories`)
         .then((res) => res.json())
         .then((res) => res.data)
 
-    const lastNews = await fetch(`http://localhost:1337/api/posts?sort[0]=publishedAt%3Adesc&pagination[limit]=5&populate=*`)
+    const lastNews = await fetch(`http://api.new.year.portal.rtyva.ru/api/posts?sort[0]=publishedAt%3Adesc&pagination[limit]=5&populate=*`)
         .then((res) => res.json())
         .then((res) => res.data)
 
-    const upcomingEvents = await fetch(`http://localhost:1337/api/events?pagination[limit]=3&sort[0]=beginning_date%3Aasc&populate[status][$eq]=Ожидает+проведения`)
+    const upcomingEvents = await fetch(`http://api.new.year.portal.rtyva.ru/api/events?pagination[limit]=3&sort[0]=beginning_date%3Aasc&populate[status][$eq]=Ожидает+проведения`)
         .then((res) => res.json())
         .then((res) => res.data)
 
