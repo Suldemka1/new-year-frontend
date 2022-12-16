@@ -15,10 +15,11 @@ const PostCard = ({title, short_description, preview_image, pusblishedAt}) => {
                     {title}
                 </div>
                 <div className={styles.card_body}>
-
                     <div>
                         {short_description}
                     </div>
+                </div>
+                <div>
                     <div className={styles.card_footer}>
                         {pusblishedAt}
                     </div>

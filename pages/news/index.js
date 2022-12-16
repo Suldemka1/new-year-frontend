@@ -1,5 +1,6 @@
 import React from 'react';
 import PostCard from "../../components/Posts/PostCard";
+import TagsMenu from "../../components/News/TagsMenu";
 
 export const getServerSideProps = async () => {
     const posts = await fetch(`http://api.new.year.portal.rtyva.ru/api/posts?populate=*`)
@@ -16,6 +17,7 @@ export const getServerSideProps = async () => {
 const News = ({posts}) => {
     return (
         <div className="container">
+            <TagsMenu />
             {
                 posts.map((item) => {
                     return <PostCard
